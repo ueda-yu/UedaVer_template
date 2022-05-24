@@ -160,10 +160,10 @@
       # Use the helpful third party Jitterbit Get Changed Files action to
       # determine what files have been added or modified.
 
-      #- name: Get Pull Request Changeset
-      #  if: ${{ github.event_name == 'pull_request' }}
-      #  id: changeset
-      #  uses: jitterbit/get-changed-files@v1
+      - name: Get Pull Request Changeset
+        if: ${{ github.event_name == 'pull_request' }}
+        id: changeset
+        uses: jitterbit/get-changed-files@v1
 
       # On a pull request, run an incremental analysis. This uses auto
       # capture as well, and references a stream that was presumably
